@@ -315,8 +315,7 @@ Some uses for an `emptyDir` are:
 Depending on your environment, `emptyDir` volumes are stored on whatever medium that backs the
 node such as disk or SSD, or network storage. However, if you set the `emptyDir.medium` field
 to `"Memory"`, Kubernetes mounts a tmpfs (RAM-backed filesystem) for you instead.
-While tmpfs is very fast, be aware that unlike disks, tmpfs is cleared on
-node reboot and any files you write count against your container's
+Also be aware that any files you write to tmpfs count against your container's
 memory limit.
 
 {{< note >}}
